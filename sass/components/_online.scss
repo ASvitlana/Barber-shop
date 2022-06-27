@@ -1,0 +1,14 @@
+.online {
+    background-color: gray;
+}
+
+.online__title {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height:calc(49/42);
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: var(--light-theme-color);
+}
