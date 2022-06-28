@@ -6,7 +6,7 @@
 
 .social__list {
     @media screen and (min-width: 768px) {
-        padding: 115px;
+        width: 110px;
     }
     
     @media screen and (min-width: 1200px) {
@@ -16,10 +16,15 @@
 
 .hero-content {
     background-color: gray;
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/decktop/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding: 208px 143px 183px 31px;
 
     @media screen and (min-width: 768px) {
         padding: 280px 70px 234px 70px;
+        flex-grow: 1;
     }
 
     @media screen and (min-width: 1200px) {
@@ -35,6 +40,11 @@
     text-transform: uppercase;
     color: var(--secondary-text-color);
     margin-bottom: var(--typical-margin);
+
+    // &::before {
+    //     content: '';
+    
+    // }
 }
 
 .hero-content__title {
@@ -71,7 +81,6 @@
         letter-spacing: 0.02em;
         color: var(--secondary-text-color);
         max-width: 400px;
-
     }
     
 }

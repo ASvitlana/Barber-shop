@@ -1,5 +1,11 @@
 .prices {
-    background-color: gray;
+    background-color: rgba(17, 19, 25, 1);
+    background-image: url(../images/decktop/prices-bcg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 1280px;
+    margin: 0 auto;
     padding-top: 84px 0;
 
     @media screen and (min-width: 768px) {
@@ -32,17 +38,33 @@
     margin-bottom: 44px;
 }
 
+.prices__wrap {
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
+}
+
 .prices__list {
     border: 1px solid tomato;
     padding: 30px;
+    margin: 0;
 
     @media screen and (min-width: 768px) {
         padding: 30px 40px;
     }
+
+    @media screen and (min-width: 1200px) {
+        flex-grow: 1;    }
 }
 
 .prices__item {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prices__item:last-child {
+    margin-bottom: 0;
 }
 
 .prices__item-text {
@@ -61,4 +83,5 @@
 .prices__button {
     display: block;
     margin: 0 auto;
+    margin-top: 50px;
 }
