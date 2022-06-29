@@ -453,7 +453,6 @@ img {
 }
 
 .prices__list {
-  border: 1px solid tomato;
   padding: 30px;
   margin: 0;
 }
@@ -470,6 +469,16 @@ img {
   }
 }
 
+.prices__list--light {
+  background: -webkit-gradient(linear, left top, left bottom, from(#171A24), to(rgba(23, 26, 36, 0.2)));
+  background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.prices__list--dark {
+  background: -webkit-gradient(linear, left top, left bottom, from(#090B13), to(rgba(9, 11, 19, 0.2)));
+  background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
 .prices__item {
   margin-bottom: 20px;
   display: -webkit-box;
@@ -478,6 +487,20 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.prices__item::before {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .prices__item:last-child {
@@ -490,6 +513,11 @@ img {
   line-height: 2.1428571429;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+}
+.prices__item-text:first-child {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 @media screen and (min-width: 768px) {
   .prices__item-text {
@@ -518,8 +546,17 @@ img {
   }
 }
 
+.benefits__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 370px;
+}
+
 .benefits__item {
-  border: 1px solid red;
+  background-color: #f7f7f7;
   width: 193px;
   height: 133px;
   padding: 20px 35px;
@@ -537,6 +574,12 @@ img {
     height: 133px;
     padding: 20px;
   }
+  .benefits__item:nth-child(odd) {
+    margin-right: 30px;
+  }
+  .benefits__item:nth-child(even) {
+    margin-bottom: 30px;
+  }
 }
 
 .benefits__item-count {
@@ -546,6 +589,11 @@ img {
   text-align: center;
   letter-spacing: 0.05em;
   color: var(--dark-theme-color);
+}
+.benefits__item-count::after {
+  content: "+";
+  color: var(--accent-color);
+  vertical-align: top;
 }
 
 .benefits__item-text {

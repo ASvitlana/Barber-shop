@@ -45,7 +45,7 @@
 }
 
 .prices__list {
-    border: 1px solid tomato;
+    // border: 1px solid tomato;
     padding: 30px;
     margin: 0;
 
@@ -57,10 +57,28 @@
         flex-grow: 1;    }
 }
 
+.prices__list--light {
+    background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.prices__list--dark {
+    background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);;
+}
+
 .prices__item {
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
+}
+
+.prices__item::before {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background-color: rgba(157, 164, 189, 0.12);
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
 .prices__item:last-child {
@@ -73,6 +91,10 @@
     line-height:calc(30/14);
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
+
+    &:first-child {
+        order: -1;
+    }
 
     @media screen and (min-width: 768px) {
         font-size: 18px;

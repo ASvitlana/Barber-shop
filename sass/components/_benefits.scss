@@ -10,8 +10,15 @@
     }
 }
 
+.benefits__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 370px;
+
+}
+
 .benefits__item {
-    border: 1px solid red;
+    background-color: #f7f7f7;
     width: 193px;
     height: 133px;
     padding: 20px 35px;
@@ -26,6 +33,14 @@
         width: 170px;
         height: 133px;
         padding: 20px;
+
+        &:nth-child(odd) {
+            margin-right: 30px;
+        }
+
+        &:nth-child(even) {
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -37,6 +52,12 @@
     text-align: center;
     letter-spacing: 0.05em;
     color: var(--dark-theme-color);
+
+    &::after {
+        content: '+';
+        color: var(--accent-color);
+        vertical-align: top;
+    }
 }
 
 .benefits__item-text {
