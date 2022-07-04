@@ -155,6 +155,11 @@ img {
   display: block;
   fill: var(--dark-theme-color);
   margin-bottom: 30px;
+  -webkit-transition: color 250ms linear;
+  transition: color 250ms linear;
+}
+.menu-close-btn:hover, .menu-close-btn:focus {
+  fill: var(--accent-color);
 }
 
 .mob-menu {

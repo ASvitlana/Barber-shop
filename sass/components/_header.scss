@@ -84,6 +84,12 @@
     display: block;
     fill: var(--dark-theme-color);
     margin-bottom: 30px;
+    transition: color 250ms linear;
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
 }
 
 .mob-menu {
