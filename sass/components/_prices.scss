@@ -6,7 +6,7 @@
     background-size: cover;
     max-width: 1280px;
     margin: 0 auto;
-    padding-top: 84px 0;
+    padding: 84px 0;
 
     @media screen and (min-width: 768px) {
         padding: 100px 0;
@@ -15,7 +15,6 @@
     @media screen and (min-width: 1200px) {
         padding: 130px 0;
     }
-
 }
 
 .prices__top-text {
@@ -31,11 +30,15 @@
 .prices__title {
     font-family: 'Raleway';
     font-weight: 700;
-    font-size: 42px;
+    font-size: 28px;
     line-height: calc(49/42);
     letter-spacing: 0.05em;
     color: var(--light-theme-color);
     margin-bottom: 44px;
+
+    @media screen and (min-width: 480px) {
+        font-size: 42px;
+    }
 }
 
 .prices__wrap {
@@ -45,7 +48,6 @@
 }
 
 .prices__list {
-    // border: 1px solid tomato;
     padding: 30px;
     margin: 0;
 
@@ -87,10 +89,14 @@
 
 .prices__item-text {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 11px;
     line-height:calc(30/14);
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
+
+    @media screen and (min-width: 480px) {
+        font-size: 14px;
+    }
 
     &:first-child {
         order: -1;
@@ -103,7 +109,12 @@
 }
 
 .prices__button {
-    display: block;
+    display: flex;
     margin: 0 auto;
     margin-top: 50px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 40px;
 }

@@ -5,14 +5,27 @@
     line-height: 16px;
     letter-spacing: 0.09em;
     text-transform: uppercase;
-    color: var(--light-theme-color);
     background-color: transparent;
     border: 1px solid var(--accent-color);
     border-radius: 25px;
     min-width: 160px;
     height: 40px;
+    transition: background-color 250ms linear;
+
+    &--light-theme {
+        color: var(--dark-theme-color);
+    }
+
+    &--dark-theme {
+        color: var(--light-theme-color);
+    }
+
+    &:hover, 
+    &:focus {
+        background-color: var(--accent-color);
+        color: var(--light-theme-color);
+    }
 }
 
-.about-content__btn {
-    color: var(--dark-theme-color);
-}
+
+
